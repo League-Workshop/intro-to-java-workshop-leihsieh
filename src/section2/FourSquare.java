@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import org.jointheleague.graphical.robot.Robot;
 
 public class FourSquare {
+	// 1. Call the drawSquare() method
 	
 	// 2. Create a new Robot
 
@@ -16,7 +17,7 @@ public class FourSquare {
 
 			// 7. Set the pen color to random
 	
-			// 1. Call the drawSquare() method
+			
 	
 			// 8. Turn the robot 90 degrees to the right
 
@@ -32,6 +33,17 @@ public class FourSquare {
 
 	public static void main(String[] args) {
 		new FourSquare().go();
+	Robot jarvis= new Robot();
+	jarvis.penDown();
+	jarvis.setSpeed(100);
+	jarvis.moveTo(500, 500);
+	jarvis.move(200);
+	 jarvis.turn(90);
+	 jarvis.move(200);
+	 jarvis.turn(90);
+	 jarvis.move(200);
+	 jarvis.turn(90);
+	 jarvis.move(200);
 	}
 
 }
