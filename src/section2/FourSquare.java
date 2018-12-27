@@ -35,18 +35,30 @@ public class FourSquare {
 		new FourSquare().go();
 	Robot jarvis= new Robot();
 	jarvis.penDown();
+	jarvis.sparkle();
+	jarvis.setPenWidth(5);
 	jarvis.setSpeed(100);
-	jarvis.moveTo(500, 500);
+	jarvis.moveTo(300, 300);
+	for (int i = 0; i < 4; i++) {
+	jarvis.setRandomPenColor();
 	jarvis.move(200);
-	 jarvis.turn(90);
-	 jarvis.move(200);
-	 jarvis.turn(90);
-	 jarvis.move(200);
-	 jarvis.turn(90);
-	 jarvis.move(200);
+	jarvis.turn(90);
+	jarvis.setRandomPenColor();
+	jarvis.move(200);
+	jarvis.turn(90);
+	jarvis.setRandomPenColor();
+	jarvis.move(200);
+	jarvis.turn(90);
+	jarvis.setRandomPenColor();
+	jarvis.move(200);
+	}
+	
+	}
+	
+	
 	}
 
-}
+
 
 
 
