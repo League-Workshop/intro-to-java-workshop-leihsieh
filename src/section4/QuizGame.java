@@ -9,53 +9,52 @@ public class QuizGame {
 		// 1. Create a variable to hold the user's score
 		int score = 0;
 		// 2. Ask the user a question
-		String answer1 = JOptionPane.showInputDialog("What is the capital of Russia?");
+		String question1 = JOptionPane.showInputDialog("What is Leighton's birthday?");
 		// 3. Use an if statement to check if their answer is correct
-		if (answer1.equalsIgnoreCase("Moscow")) {
-			JOptionPane.showMessageDialog(null, "Good job!");
+		if (question1.equals("March 16 2005")) {
+			score+=1;
+			JOptionPane.showMessageDialog(null, "Correct! Your score is now " + score);
+		}
+		else if (question1.equals("3/16/05")) {
+			score+=1;
+			JOptionPane.showMessageDialog(null, "Correct! Your score is now " + score);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect! Your score is " + score);
 		}
 
-		else {
-			JOptionPane.showMessageDialog(null, "Wrong! The correct answer is Moscow.");
-		}
+		
 		// 4. if the user's answer is correct
-		if (answer1.equalsIgnoreCase("Moscow")) {
-			score ++ ;
-			JOptionPane.showMessageDialog(null, "Your score is " + score);}
-		else {
-			score -- ;
-			JOptionPane.showMessageDialog(null, "Your score is " + score);
-		}
+		
 
 		// -- add one to their score
 
 		// 5. Create more questions by repeating steps 1, 2, and 3 below.
-		String answer3 = JOptionPane.showInputDialog("What is the capital of Taiwan?");
-		if (answer3.equalsIgnoreCase("Taipei")) {
-			score ++ ;
-			JOptionPane.showMessageDialog(null, "Good job!");
-			JOptionPane.showMessageDialog(null, "Your score is " + score);
-		}else{
-			score -- ;
-			JOptionPane.showMessageDialog(null, "Wrong! The correct answer is Taipei.");
-			JOptionPane.showMessageDialog(null, "Your score is " + score);
+		
+		String question2 = JOptionPane.showInputDialog("What is Leighton's favorite pasttime?");
+		if (question2.equalsIgnoreCase("procrastinating")) {
+			score+=1;
+			JOptionPane.showMessageDialog(null, "Correct! Your score is now " + score);
 		}
-		String answer2 = JOptionPane.showInputDialog("What is the capital of Japan?");
-		if (answer2.equalsIgnoreCase("Tokyo")) {
-			score ++ ;
-			JOptionPane.showMessageDialog(null, "Good job!");
-			JOptionPane.showMessageDialog(null, "Your score is " + score);
-		}else{
-			score -- ;
-			JOptionPane.showMessageDialog(null, "Wrong! The correct answer is Tokyo");
-			JOptionPane.showMessageDialog(null, "Your score is " + score);
+		if (question2.equalsIgnoreCase("procrastination")) {
+			score+=1;
+			JOptionPane.showMessageDialog(null, "Correct! Your score is now " + score);
 		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect! Your score is " + score);
 		}
-	
-	
-	}
+		
+		String question3 = JOptionPane.showInputDialog("What is Leighton's favorite subject in school?");
+		if (question3.equalsIgnoreCase("math")) {
+			score+=1;
+			JOptionPane.showMessageDialog(null, "Correct! Your final score is " + score);
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Incorrect! Your final score is " + score);
+		}
 
 		// 6. After all the questions have been asked, print the user's score
 
-	
+	}
+}
 
