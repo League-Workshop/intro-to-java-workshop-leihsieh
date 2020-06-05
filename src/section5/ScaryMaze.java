@@ -28,19 +28,13 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//2. Change the line of code above so that it matches your maze's file name
 		
 		//3. Set the mouse pointer to the start of your maze using:
-		//new Robot().mouseMove(45, 95);
-		JOptionPane.showMessageDialog(null, "Get to the green");
-		JOptionPane.showInputDialog("Keep the mouse very still (type anything)");
-		new Robot().mouseMove(67, 143);
+		new Robot().mouseMove(65, 155);
+		
 		//4. Add a mouse motion listener using:
 		addMouseMotionListener(this);
 		
 	}
-//0 = background(white)
-//-16777216 = path(black)
-//-1754827 = start(red)
-//-5317 = extra points(yellow)
-//-11751600 = win(green)
+
 	@Override
 	public void mouseMoved(MouseEvent e) {
 		int mouseX = e.getX();
@@ -51,33 +45,33 @@ public class ScaryMaze extends JPanel implements Runnable, MouseMotionListener {
 		//6.  Run your program and put your mouse over the background to find out what color it is
 		
 		//7. Create an int variable that holds the background color. 
-		
+		int background = 0;
 		//8. If the mouse falls off the path (if it is on the background)
-if(mouseColor == 0){
-	scare();	}
-}
+		if (mouseColor == background) {
 				// call the scare method
-		
+		scare();
+		}
 		//13. If the mouse is on the end color
-		
+		if (mouseColor == -11751600) {
 				// pop up a message to tell them they won
-		
+		JOptionPane.showMessageDialog(null, "You won!");
+		}
+	}
 	
-
 	private void scare() {
 		System.out.println("BOO!");
 		//9. Find a scary sound and put it in the section5 package where you put your maze picture. You can find a sound on freesound.org. Log in as leagueofamazing/code4life.
 		
 		//10. Use the code below to load your sound.  Change the file name to match the name of your sound file.  
-		AudioClip sound = JApplet.newAudioClip(getClass().getResource("standardScarySound.wav"));
+		//AudioClip sound = JApplet.newAudioClip(getClass().getResource("standardScarySound.wav"));
 		
 		//11. Play the scary sound. Hint: type "sound" and then a period.		
-		sound.play();
+	
 		//12. Drop an image into your section5 package, and use the showScaryImage method to scare your victim!
 		showScaryImage("standardScaryPicture.jpg");
 	}
 
-	private void showScaryImage(String "standardScaryPicture.jpg") {
+	private void showScaryImage(String imageName) {
 		try {
 			maze = ImageIO.read(getClass().getResource(imageName));
 		} catch (Exception e) {
